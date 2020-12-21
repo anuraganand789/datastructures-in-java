@@ -9,7 +9,7 @@ public class LeadersInArray{
 	for(int currIndex = length - 1; currIndex > -1; --currIndex){
 	    final int number = numbers[currIndex];
 	    if(number > maxOnRight){
-	        System.out.format("%d is a LEADER.%n", number);
+	        System.out.format("Number %d is a LEADER.%n", number);
 		maxOnRight = number;
 	    }
 	}
