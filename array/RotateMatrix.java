@@ -1,4 +1,4 @@
-public class RotateArray{
+public class RotateMatrix{
     
     public static void main(final String ... args){
         final int[][] matrix = {
