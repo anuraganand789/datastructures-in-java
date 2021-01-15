@@ -1,11 +1,31 @@
+    public static Node reverseTheLinkedList(final Node head){
+        if(head == null || head.nextNode == null) return head;
+
+	Node currentNode = head;
+	Node nextNodeOfCurrentNode = null;
+	Node previousNode = null;
+
+	while(currentNode != null){
+	    nextNodeOfCurrentNode = currentNode.nextNode;
+
+	    currentNode.nextNode = previousNode;
+	    previousNode = currentNode;
+
+	    currentNode = nextNodeOfCurrentNode;
+	}
+
+	return previousNode;
+    }
+
     private static void printALinkedList(Node node){
         while(node != null) {
-	    System.out.format("%d -> ", node.nextNode);
+	    System.out.format("%d -> ", node.data);
 	    node = node.nextNode;
 	}
 
 	System.out.println(node);
     }
+
     private static int lengthOfLinkedList(Node headOfTheLinkedList){
         int numberOfNodes  = 0;
 	while(headOfTheLinkedList != null) { 
@@ -15,6 +35,7 @@
 
 	return numberOfNodes;
     }
+
     private static Node rotate(final Node headOfTheLinkedList, final int times){
 	if(headOfTheLinkedList == null) return null;
         final int lengthOfTheLinkedList = lengthOfLinkedList(headOfTheLinkedList);
@@ -36,6 +57,7 @@
         
 	iterator.nextNode = headOfTheLinkedList;
     }
+
     private static class Node{
         private int data;
         private Node nextNode;
