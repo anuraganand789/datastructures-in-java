@@ -35,6 +35,6 @@
     
         five.right = six;
     
-        one.left = two;
-        one.right = three;
+        one.right = two;
+        two.right = three;
     }
